@@ -1,0 +1,36 @@
+{
+  "name": "kaalin",
+  "version": "1.0.0",
+  "description": "Special opportunities for the Karakalpak language",
+  "keywords": [
+    "language",
+    "library",
+    "javascript",
+    "karakalpak"
+  ],
+  "homepage": "https://github.com/dontbeidle/kaalin-js#readme",
+  "bugs": {
+    "url": "https://github.com/dontbeidle/kaalin-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dontbeidle/kaalin-js.git"
+  },
+  "license": "MIT",
+  "author": "Azizbek Berdimuratov",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  }
+}
