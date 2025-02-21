@@ -1,6 +1,6 @@
 {
   "name": "kaalin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Special opportunities for the Karakalpak language",
   "keywords": [
     "language",
@@ -29,6 +29,7 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
+    "@types/node": "^22.13.4",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   }
