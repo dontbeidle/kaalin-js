@@ -5,6 +5,11 @@
 </p>
 
 ## Example
+1-step: Install the package
+```bash
+npm install kaalin
+```
+
 ```javascript   
 import { toWord, toLatin, toCyrillic } from "kaalin";
 
