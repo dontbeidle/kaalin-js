@@ -16,6 +16,16 @@ function latinToCyrillicConverter(text: string): string {
   return result.join("");
 }
 
+function cyrillicToLatinConverter(text: string): string {
+  text = handleSpecialCyrillicRulesIfNeeded(text);
+  let result: string[] = [];
+  for(let char of text) {
+    result.push(cyrillicToLatin[char] || char)
+  }
+
+  return result.join("")
+}
+
 function handleSpecialCyrillicRulesIfNeeded(text: string): string {
   const specialRulePairs: Record<string, string> = {
     "ьи": "yi",
