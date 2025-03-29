@@ -17,5 +17,18 @@ function latinToCyrillicConverter(text: string): string {
 }
 
 function handleSpecialCyrillicRulesIfNeeded(text: string): string {
+  const specialRulePairs: Record<string, string> = {
+    "ьи": "yi",
+    "ьо": "yo",
+    "ъе": "ye",
+  };
+
+  for (const [cyr, lat] of Object.entries(specialRulePairs)) {
+    if (text.includes(cyr) && !text.startsWith(cyr)) {
+      text = text.replace(new RegExp(cyr, "g"), lat);
+    }
+  }
+  
   return text;
 }
+
