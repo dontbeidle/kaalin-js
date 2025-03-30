@@ -1,5 +1,6 @@
 import { NumberToWord } from "./number";
 import { Latin, Cyrillic } from './words';
+import {latinToCyrillicConverter, cyrillicToLatinConverter} from "./converter"
 
 export function toWord(number: number) {
     return new NumberToWord().toWord(number);
@@ -11,4 +12,12 @@ export function toLatin(text: string) {
 
 export function toCyrillic(text: string) {
     return new Cyrillic(text);
+}
+
+export function latinToCyrillic(text: string) {
+    return latinToCyrillicConverter(text);
+}
+
+export function cyrillicToLatin(text: string) {
+    return cyrillicToLatinConverter(text);
 }
