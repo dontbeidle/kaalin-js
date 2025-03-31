@@ -25,3 +25,10 @@ console.log(kaa.isDigit())    // false
 console.log(toWord(533_525))         // bes júz otız úsh mıń bes júz jigirma bes
 console.log(toWord(894_236_671))     // segiz júz toqsan tórt million eki júz otız altı mıń altı júz jetpis bir
 ```
+
+```javascript
+import { latinToCyrillic, cyrillicToLatin } from "kaalin";
+
+console.log(latinToCyrillic("Assalawma áleykum"))      // Ассалаўма әлейкум
+console.log(cyrillicToLatin("Ассалаўма әлейкум"))      // Assalawma áleykum
+```
