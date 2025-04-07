@@ -1,1 +1,1 @@
-export * from './latin_cyrillic_converter';
+export { latin2cyrillic, cyrillic2latin } from './latin_cyrillic_converter';

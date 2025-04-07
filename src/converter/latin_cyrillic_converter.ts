@@ -1,6 +1,6 @@
 import { cyrillicToLatin, latinToCyrillic } from "../constants";
 
- function latinToCyrillicConverter(text: string): string {
+function latin2cyrillic(text: string): string {
   let result: string[] = [];
   let i = 0;
   while (i < text.length) {
@@ -16,10 +16,10 @@ import { cyrillicToLatin, latinToCyrillic } from "../constants";
   return result.join("");
 }
 
- function cyrillicToLatinConverter(text: string): string {
+function cyrillic2latin(text: string): string {
   text = handleSpecialCyrillicRulesIfNeeded(text);
   let result: string[] = [];
-  for(let char of text) {
+  for (let char of text) {
     result.push(cyrillicToLatin[char] || char)
   }
 
@@ -38,8 +38,8 @@ function handleSpecialCyrillicRulesIfNeeded(text: string): string {
       text = text.replace(new RegExp(cyr, "g"), lat);
     }
   }
-  
+
   return text;
 }
 
-export {latinToCyrillicConverter,cyrillicToLatinConverter}
+export { latin2cyrillic, cyrillic2latin }
