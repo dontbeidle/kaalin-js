@@ -23,14 +23,11 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts",
-    "test": "jest",
-    "lint": "eslint . --ext .ts",
-    "prepare": "npm run build"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
-    "tsup": "^8.4.0",
     "typescript": "^5.7.3"
   }
 }

@@ -19,7 +19,7 @@ export class NumberToWord {
         { value: 1_000, word: "mıń" }
     ];
 
-    public toWord(number: number) {
+    public toWord(number: number): string {
         if (number < 20) return this.ones[number];
         if (number < 100) return this.formatTens(number);
         if (number < 1000) return this.formatHundreds(number);
@@ -31,6 +31,8 @@ export class NumberToWord {
         for (const scale of this.scales) {
             if (number >= scale.value) return this.formatLargeNumber(number, scale.value, scale.word);
         }
+
+        throw new Error("Number is out of range");
     }
 
     private formatTens(number: number): string {
